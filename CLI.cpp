@@ -26,6 +26,9 @@ void CLI::start() {
             dio->write(allCommands[i]->getDescription());
         }
         choice = atoi(dio->read().c_str());
+        if (choice < 1 || choice > 6) {
+            continue;
+        }
         allCommands.at(choice - 1)->execute();
     }
 }
