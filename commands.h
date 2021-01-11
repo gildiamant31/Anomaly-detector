@@ -3,17 +3,26 @@
 #ifndef COMMANDS_H_
 #define COMMANDS_H_
 
-#include<iostream>
+#include <fstream>
+#include <iostream>
+#include <string.h>
+#include <sstream>
+#include <vector>
+#include <string>
+#include <utility>
+#include <stdexcept>
+#include <math.h>
+#include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
-#include <sys/types.h>
+#include <netdb.h>
 #include <pthread.h>
 #include <thread>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include <string>
-#include <fstream>
-#include <vector>
 #include <unistd.h>
+#include <time.h>
 #include "HybridAnomalyDetector.h"
 
 using namespace std;
@@ -73,10 +82,10 @@ public:
     virtual string read() {
         string serverInput = "";
         char c = 0;
-        int r1 = ::read(userID, &c, sizeof(char));
+        ::read(userID, &c, sizeof(char));
         while (c != '\n') {
             serverInput += c;
-            int r2 = ::read(userID, &c, sizeof(char));
+            ::read(userID, &c, sizeof(char));
         }
         return serverInput;
     }
@@ -91,7 +100,6 @@ public:
     }
 
     virtual void read(float *f) {
-        in >> *f;
     }
 };
 
