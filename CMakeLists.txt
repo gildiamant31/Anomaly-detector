@@ -10,5 +10,5 @@ add_executable(ex6 ../ex6/MainTrain.cpp ../ex6/anomaly_detection_util.cpp ../ex6
         ../ex6/AnomalyDetector.h ../ex6/SimpleAnomalyDetector.h ../ex6/timeseries.cpp
         ../ex6/SimpleAnomalyDetector.cpp ../ex6/timeseries.h ../ex6/HybridAnomalyDetector.cpp
         ../ex6/HybridAnomalyDetector.h ../ex6/minCircle.h ../ex6/minCircle.cpp ../ex6/commands.h ../ex6/CLI.cpp
-        ../ex6/CLI.h ../ex6/expected_output.txt ../ex6/input.txt ../ex6/Server.cpp ../ex6/Server.h
-        ../ex6/expected_output_menu.txt)
+        ../ex6/CLI.h ../ex6/Server.cpp ../ex6/Server.h
+        )
